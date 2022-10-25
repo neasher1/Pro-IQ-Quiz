@@ -9,6 +9,12 @@
     width: 200px;
 }
 
+.topics-details {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
 .btn {
     border: none;
     background-color: blue;
@@ -16,4 +22,5 @@
     border-radius: 5px;
     color: white;
     font-size: 18px;
+    text-decoration: none;
 }
