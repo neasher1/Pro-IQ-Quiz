@@ -18,16 +18,18 @@ const Quiz = () => {
     };
 
     return (
-        <div className='row gx-2 gy-2'>
-            <h2>Quiz of {quiz.data.name}</h2>
-            <div className='row'>
-                {
-                    quiz.data.questions.map(quiz => <QuizDetails
-                        key={quiz.id}
-                        quiz={quiz}
-                        handleAns={handleAns}
-                    ></QuizDetails>)
-                }
+        <div className="container">
+            <div className='row gx-2 gy-2'>
+                <h2>Quiz of {quiz.data.name}</h2>
+                <div className='row'>
+                    {
+                        quiz.data.questions.map(quiz => <QuizDetails
+                            key={quiz.id}
+                            quiz={quiz}
+                            handleAns={handleAns}
+                        ></QuizDetails>)
+                    }
+                </div>
             </div>
         </div>
     );
