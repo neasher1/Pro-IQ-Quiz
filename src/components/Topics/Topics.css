@@ -1,0 +1,22 @@
+.banner img {
+    width: 50%;
+    display: block;
+    margin: 30px auto;
+}
+
+.banner p {
+    width: 50%;
+    margin: 0 auto;
+}
+
+.full-topics-container {
+    background-color: lightgoldenrodyellow;
+    padding: 10px;
+}
+
+.topics {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin: 40px 250px;
+    gap: 30px;
+}

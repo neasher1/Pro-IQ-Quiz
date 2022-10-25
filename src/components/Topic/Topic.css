@@ -1,0 +1,19 @@
+.topic-container {
+    border: 1px solid goldenrod;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: gold;
+}
+
+.logo img {
+    width: 200px;
+}
+
+.btn {
+    border: none;
+    background-color: blue;
+    padding: 10px 12px;
+    border-radius: 5px;
+    color: white;
+    font-size: 18px;
+}
