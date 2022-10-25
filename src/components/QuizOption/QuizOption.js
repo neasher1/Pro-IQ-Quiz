@@ -1,10 +1,10 @@
 import React from 'react';
-
-const QuizOption = ({ option }) => {
+import './QuizOption.css';
+const QuizOption = ({ option, handleOption }) => {
     // console.log(option)
     return (
-        <div>
-            {option}
+        <div className='col-lg-6'>
+            <p className='option' onClick={() => handleOption(option)}>{option}</p>
         </div>
     );
 };

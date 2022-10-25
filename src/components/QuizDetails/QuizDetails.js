@@ -1,21 +1,40 @@
 import React from 'react';
+import { useState } from 'react';
+import toast from 'react-hot-toast';
 import QuizOption from '../QuizOption/QuizOption';
+import './QuizDetails.css';
+import { EyeSlashIcon } from '@heroicons/react/24/solid'
 
-const QuizDetails = ({ quiz }) => {
-    // console.log(quiz.options)
-    const { correctAnswer, question, options } = quiz;
-    // console.log(options[0])
+const QuizDetails = ({ quiz, handleAns }) => {
+    const { correctAnswer, question, options, id } = quiz;
+    console.log(quiz)
+
+    const handleOption = (event) => {
+        if (correctAnswer == event) {
+            toast.success('Correct Ans');
+        }
+        else {
+            toast.error('Wrong Ans');
+        }
+    }
+
     return (
-        <div>
-            <div className="question">
-                {
-                    question
-                }
-            </div>
-            <div className="options">
-                {
-                    options.map((option, idx) => <QuizOption key={idx} option={option}></QuizOption>)
-                }
+        <div className='col-lg-4 g-4'>
+            <div className='quiz'>
+                <div className="question">
+                    {
+                        <p>
+                            {question}
+                            <EyeSlashIcon className="icon" onClick={() => handleAns(id)} />
+                        </p>
+                    }
+                </div>
+                <div className="options row">
+                    {
+                        options.map((option) => <QuizOption option={option}
+                            handleOption={handleOption}></QuizOption>)
+                    }
+                </div>
             </div>
         </div>
     );

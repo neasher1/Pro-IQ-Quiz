@@ -5,6 +5,8 @@ import Topics from './components/Topics/Topics';
 import Statistics from './components/Statistics/Statistics';
 import Blogs from './components/Blogs/Blogs';
 import Quiz from './components/Quiz/Quiz';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import { Toaster } from 'react-hot-toast';
 
 function App() {
 
@@ -22,6 +24,9 @@ function App() {
         },
         {
           path: 'statistics',
+          loader: () => {
+            return fetch('https://openapi.programming-hero.com/api/quiz');
+          },
           element: <Statistics></Statistics>
         },
         {
@@ -46,6 +51,7 @@ function App() {
   return (
     <div className="App">
       <RouterProvider router={router}></RouterProvider>
+      <Toaster></Toaster>
     </div>
   );
 }

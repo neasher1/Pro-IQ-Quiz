@@ -1,0 +1,10 @@
+.option {
+    border: 1px solid purple;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.option:hover {
+    background-color: green;
+    color: white;
+}
